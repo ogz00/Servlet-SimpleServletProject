@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>SimpleServletProject</display-name>
+	<!-- <welcome-file-list> <welcome-file>index.html</welcome-file> </welcome-file-list> -->
+
+	<servlet>
+		<servlet-name>ObjectInitJSP</servlet-name>
+		<jsp-file>/objects.jsp</jsp-file>
+		<init-param>
+			<param-name>defaultUser</param-name>
+			<param-value>DEF..USER NAME</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ObjectInitJSP</servlet-name>
+		<url-pattern>/objects.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>xmlServlet</servlet-name>
+		<servlet-class>org.oguz.servlet.XMLServlet</servlet-class>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>oguzhan</param-value>
+
+		</init-param>
+		<init-param>
+			<param-name>fullname</param-name>
+			<param-value>oguzhan karacullu</param-value>
+
+		</init-param>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>SimpleServlet</servlet-name>
+		<servlet-class>org.oguz.servlet.SimpleServlet</servlet-class>
+		<init-param>
+			<param-name>defaultUser</param-name>
+			<param-value>Oguzhan</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>xmlServlet</servlet-name>
+		<url-pattern>/xmlServletPath</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SimpleServlet</servlet-name>
+		<url-pattern>/SimpleServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
